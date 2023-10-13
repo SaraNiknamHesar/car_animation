@@ -1,6 +1,7 @@
 @import "_grid-system.css";
 @import "_reset.css";
-.main-bg{
+
+.main-bg {
     width: 100%;
     height: 100vh;
     background-image: url("../img/sky.jpg");
@@ -9,7 +10,9 @@
     position: relative;
     overflow-x: hidden;
 }
-.road{
+
+.road {
+    background-image: url("../img/road.jpg");
     height: 200px;
     width: 500%;
     display: block;
@@ -17,4 +20,49 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: road 5s linear infinite;
+}
+
+@keyframes road {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-4000px);
+    }
+}
+.city {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    width: 500%;
+    height: 250px;
+    background-repeat: repeat-x;
+    background-image: url("../img/city.png");
+    animation: city 10s linear infinite;
+}
+@keyframes city{
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-4000px);
+    }
+}
+.car{
+    width: 100%;
+}
+.car{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    bottom: 38%;
+    transform: translateX(-50%);
+}
+.car img{
+    width: 100%;
+
 }
