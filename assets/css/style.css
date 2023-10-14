@@ -33,6 +33,7 @@
         transform: translateX(-4000px);
     }
 }
+
 .city {
     position: absolute;
     left: 0;
@@ -44,7 +45,8 @@
     background-image: url("../img/city.png");
     animation: city 10s linear infinite;
 }
-@keyframes city{
+
+@keyframes city {
     0% {
         transform: translateX(0px);
     }
@@ -52,17 +54,66 @@
         transform: translateX(-4000px);
     }
 }
-.car{
+
+.car {
     width: 100%;
 }
-.car{
+
+.car {
     width: 400px;
     position: absolute;
     left: 50%;
-    bottom: 38%;
+    bottom: 17.5%;
     transform: translateX(-50%);
 }
-.car img{
+
+.car img {
     width: 100%;
+    animation: shake 1s linear infinite;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-1px);
+    }
+    25% {
+        transform: translateY(1px);
+    }
+    50% {
+        transform: translateY(-1px);
+    }
+    75% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(-1px);
+    }
+}
+
+.wheels img{
+    animation: spinning 1s linear infinite;
+
+}
+.wheels .front {
+    position: absolute;
+    left: 54%;
+    bottom: 18%;
+    width: 80px;
+
+}
+
+.wheels .rear {
+    position: absolute;
+    left: 41.2%;
+    bottom: 18%;
+    width: 80px;
+
+
+}
+@keyframes spinning{
+    100%{
+        transform: rotate(360deg);
+    }
 
 }
